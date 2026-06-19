@@ -424,7 +424,7 @@ a:hover {
 
 .schedule-row {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 150px 1fr 220px;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -439,8 +439,18 @@ a:hover {
 }
 
 .schedule-time,
-.schedule-event {
+.schedule-title,
+.schedule-speaker {
     padding: 16px 24px;
+}
+
+.schedule-speaker {
+    border-left: 1px solid var(--color-border);
+    font-size: 0.9rem;
+}
+
+.schedule-header .schedule-speaker {
+    border-left-color: rgba(255,255,255,0.2);
 }
 
 .schedule-time {
@@ -639,11 +649,12 @@ footer p {
     }
 
     .schedule-row {
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 100px 1fr 150px;
     }
 
     .schedule-time,
-    .schedule-event {
+    .schedule-title,
+    .schedule-speaker {
         padding: 12px 16px;
         font-size: 0.9rem;
     }
